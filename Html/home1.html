@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Accounts</title>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="/CSS/home1.css">
+    
+</head>
+<body>
+        <header>
+            <div class="nav">
+                <img src="/Images/logo1.png" class="logo">
+                <div class="main">
+                    <div class="dropdown">
+                        <button>Accounts</button>
+                        <div class="sub">
+                        <a href="#">Account Balance</a>
+                        <a href="/Html/summary1.html">Transactions</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <button>Loans</button>
+                        <div class="sub">
+                        <a href="/Html/personal.html">Personal Loan</a>
+                        <a href="/Html/homeloan.html">Home Loan</a>
+                        <a href="/Html/carloan.html">Car Loan</a>
+                        <a href="/Html/education.html">Education Loan</a>
+                        <a href="/Html/gold.html">Gold Loan</a>
+                        <a href="/Html/loanform.html">Loan Application form</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <button>Bill Payment</button>
+                        <div class="sub">
+                        <a href="/Html/billfirst.html">Payment</a>
+                        <a href="/Html/creditcard.html">Credit card bill payment</a>
+                        <a href="/Html/billpayment.html">Bill payments and recharge</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <button>Transfer</button>
+                        <div class="sub">
+                        <a href="/Html/fundtransfer.html">Fund Transfer</a>
+                        </div>
+                    </div>
+                    <div class="logout">
+                        <a href=""><img src="/Images/logout.png" id="logoutBtn"></a>
+                    </div>
+                </div>           
+            </div>
+        </header>
+        <div class="profile">
+            <div class="img">
+                <img src="/Images/usericon.png" class="image">
+            </div> 
+            <div class="content">
+                <p><b>Name:</b>Aravind<br><br>
+                    <b>Mobile Number:</b> xxxxxx2479<br><br>
+                    <b>Email id:</b> aravind123@gmail.com
+                </p>
+            </div>
+        </div>
+        <div class="out">
+            <div class="tranacc">
+                <h2>Transaction Accounts</h2>
+            </div>
+            <div class="ele">
+                <div>
+                    <p>Account No./Name</p>
+            
+                </div>
+                <div>
+                    <p>Branch</p>
+                </div>
+                <div>
+                    <p>Available Balance</p>
+                </div>
+                <div>
+                    <p>Transactions</p>
+                </div>
+            </div>
+        <hr>
+            <div class="ele">
+                <div>
+                    <span>3214567890</span>
+                </div>
+                <div>
+                    <p>ARUMBAKKAM</p>
+                </div>
+                <div>
+                    RS.1500
+                </div>
+                <div>
+                    <p><a href="/Html/summary1.html" style="text-decoration: none;">click here for last 10 Transaction</a></p>
+                </div>
+            </div>
+        </div>
+        <footer class="copyright">
+            <p class="copy">CopyRights &copy 2023 CrownBank <span class="copy1">|</span> <span>Right Bank Right Now</span> <span class="copy1">|</span>  All Rights Reserved </p>
+        </footer>
+
+
+
+
+        <div class="popup-container">
+            <div class="popup">
+              <h2>Subscribe to our Newsletter</h2>
+              <form>
+                <input type="email" placeholder="Enter your email">
+                <button type="submit" class="subscribe">Subscribe</button>
+              </form>
+              <p>Stay updated with our latest news and promotions!</p>
+              <button class="close-btnn">&times;</button>
+            </div>
+          </div>
+          <script>
+            const popupContainer = document.querySelector('.popup-container');
+    const closeBtn = document.querySelector('.close-btnn');
+    const subscribeBtn = document.querySelector('.subscribe');
+    
+    function hidePopup() {
+      popupContainer.style.display = 'none';
+      window.removeEventListener('load', showPopup);
+    }
+    
+    function showPopup() {
+      popupContainer.style.display = 'flex';
+    }
+    
+    closeBtn.addEventListener('click', hidePopup);
+    
+    subscribeBtn.addEventListener('click', () => {
+      hidePopup();
+      subscribeBtn.disabled = true;
+    });
+    
+    window.addEventListener('load', showPopup);
+          </script>
+
+
+
+
+        <script src="/JS/logout.js"></script>
+</body>
+</html>

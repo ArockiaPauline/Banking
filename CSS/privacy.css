@@ -1,0 +1,135 @@
+body{
+    margin: 0%;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.nav{
+    width: 100%;
+    height: 150px;
+    background-color:  #003e7e;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+}
+.nav .logo{
+    margin-top: 14px;
+    margin-left: 35px;
+    height: 120px;
+    width:150px;
+    border: white;
+}
+.nav ul {
+    list-style: none;
+    display: flex;   
+}
+.nav li{
+    list-style-type: none;
+    display: flex;
+}
+.nav .item{
+        position:absolute;
+        right: 0;
+        top: 40px;
+}
+.nav .item #search{
+    /* margin-top: 5px; */
+    padding: 5px;
+    height: 35px;
+    font-weight: bold;
+    border: 2px solid black;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.nav .item #button{
+    margin-right: 20px;
+    /* margin-top: 5px; */
+    height: 35px;
+    width: 100px;
+    border: 2px solid black;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.nav .item #button:hover{
+    transform: scale(1.1);
+}
+
+.nav .item ul li a{
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: aliceblue;
+    font-size: 20px;
+    padding:  5px 5px;
+    border-radius: 10px;
+    transition: 0.2s;
+    margin: 0 15px;
+    text-decoration: none;
+}
+.nav .item ul li a:hover{
+    color: cornflowerblue;
+    background: white;
+}
+/* header{
+    margin-bottom: 10px;
+} */
+/* FOOTER SECTION */
+.foot{
+    padding-top: 20px;
+    background-color: #003e7e;
+    margin-bottom: 0;
+    height: 200px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.foot-right p{
+    color: white;
+}
+.foot-mid .social-links{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+}
+.social-links .soc-link{
+    margin-top: 30px;
+    margin-left: 100px;
+}
+.social-links ul{
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+    position: relative;
+    flex-direction: row;
+    gap: 50px; 
+    transition: 0.3s ease;
+}
+.social-links ul li:hover{
+    color: burlywood;
+    transform: scale(1.1);
+}
+.social-links ul li a p:hover{
+    color: burlywood;
+    transform: scale(1.1);
+}
+.social-links p{
+    color: antiquewhite;
+    margin-left: 20px;
+}
+
+.copyright {
+    height: 50px;
+    padding: 1px;
+    font-size: large;
+    font-weight: bold;
+    text-align: center;
+    background-color: #00244b;;
+}
+.copy{
+    color: white;
+}
+.copy1{
+    padding: 20px;
+}

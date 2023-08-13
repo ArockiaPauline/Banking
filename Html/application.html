@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crown Bank - Application Form</title>
+    <link rel="stylesheet" href="/CSS/application.css">
+</head>
+<body>
+    <div class="container">
+        <hr size="8px" color="#003e7e">
+        <header>
+            <div class="heading">
+                <div class="logo">
+                    <img src="/Images/logoaboutus.jpeg" id="logo">
+                </div>
+                <div class="head-content">
+                    Application Form
+                </div>
+                <div class="btn">
+                    <a href="/Html/saving.html">
+                        <button type="submit" class="back">GO BACK</button>
+                    </a>
+                </div>
+            </div>
+        </header>
+        <hr size="8px" color="#003e7e">
+        <div class="formbody">
+            <form>
+                <fieldset style="height: 150px;">
+                    <legend>Add on Product</legend>
+                    <h4>Select Add on Product</h4>
+                        <input type="checkbox" id="credit" name="Select Add On Product" value="Credit Card">
+                        <label>Credit Card</label>
+                        <input type="checkbox" id="debit" name="Select Add On Product" value="Debit Card">
+                        <label>Debit Card</label>
+                        <input type="checkbox" id="insurance" name="Select Add On Product" value="Insurance">
+                        <label>Insurance</label>
+                        <input type="checkbox" id="Loan" name="Select Add On Product" value="Loan">
+                        <label>Loan</label>
+                </fieldset>
+                <fieldset style="margin-top: 30px; display: grid; grid-template-columns: auto auto;">
+                    <legend>Personal Details</legend>
+                    <div class="item">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" placeholder="Your name" required>
+                    </div>
+                    <div class="item">
+                        <label for="mailid">Email</label>
+                        <input type="email" id="mailid" placeholder=".......@gmail.com" required> 
+                    </div>
+                    <div class="item">
+                        <label for="phone">Mobile Number</label>
+                        <input type="text" id="phone" placeholder="Mobile number registered with aadhar" required>
+                    </div>
+                    <div class="item">
+                        <label for="dob">Date of Birth</label>
+                        <input type="date" id="dob" required>
+                    </div>
+                    <div class="item">
+                        <label for="adhar">Aadhar Number</label>
+                        <input type="text" id="adhar" placeholder="12-digit aadhar number" required>
+                    </div>
+                    <div class="item">
+                        <label for="pan">PAN Number</label>
+                        <input type="text" id="pan" placeholder="Permanent Account Number" required>
+                    </div>
+                    <div class="item">
+                        <label for="nat">Nationality</label>
+                        <input type="text" id="nat" placeholder="Nationality" required>
+                    </div>
+                    <div class="gen">
+                        <div>Gender</div>
+                        <input type="radio" name="Gender" id="Gender" value="Male">
+                        <label>Male</label>
+                        <input type="radio" name="Gender" id="Gender" value="Female">
+                        <label>Female</label></div>
+                    </div>
+                </fieldset>
+                <fieldset style="margin-top: 30px; margin-left: 50px; width: 88%;">
+                    <legend>Professional Details</legend>
+                    <div class="details">
+                        <label>Occupation</label>
+                        <input type="radio">Private Sector
+                        <input type="radio">Public Sector
+                    </div>
+                    <div class="gridbox">
+                        <div class="detail">
+                            <label>Company Name</label>
+                            <input type="text" id="cname" placeholder="Working place..." required>
+                        </div>
+                        <div class="detail">
+                            <label>Salary</label>
+                            <input type="text" id="sal" placeholder="Annual salary" required>
+                        </div>
+                    </div>
+                </fieldset>
+                <fieldset style="margin-top: 30px; margin-left: 50px; width: 88%;">
+                    <legend>Know Your Customer</legend>
+                    <p>Account opening through KYC</p>
+                    <p>Please upload the following documents for verification</p>
+                    <div class="kyc">
+                        <label>Aadhar Card Photo:</label>
+                        <input type="file" required>
+                        <label>PAN card Photo:</label>
+                        <input type="file"required>
+                </fieldset>
+                <div class="terms">
+                    <input type="checkbox" required>I accept all the terms and conditions of Crown Bank
+                </div>
+                <div class="submission">
+                    <input type="submit" value="PROCEED TO OPEN ACCOUNT" id="submitbtn">
+                </div>
+            </form>
+        </div>
+        <div class="copyright">
+            <p class="copy">CopyRights &copy 2023 CrownBank <span class="copy1">|</span> <span>Right Bank Right Now</span> <span class="copy1">|</span>  All Rights Reserved </p>
+        </div>
+    </div>
+    <script src="/JS/submit.js"></script>
+</body>
+</html>

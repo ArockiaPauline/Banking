@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Application Form</title>
+    <link rel="stylesheet" href="/CSS/loanform.css">
+</head>
+<body>
+    <header>
+        <div class="nav">
+            <a href="/Html/index.html">
+                <img src="/Images/logo1.png" class="logo">
+            </a>
+            <h1 class="heading">LOAN APPLICATION FORM</h1>
+            <div class="btn">
+                <a href="/Html/billpayment.html">
+                    <button type="submit" class="back">GO BACK</button>
+                </a>
+            </div>
+        </div>
+    </header>
+    <div class="background-image"></div>
+
+	<div class="form-container">
+
+		<h2>Loan Application Form</h2>
+
+		<form name="loan_form" onsubmit="">
+			
+			<label for="name">Name:</label>
+			<input type="text" name="name" id="name" required><br><br>
+
+			<label for="email">Email:</label>
+			<input type="email" name="email" id="email" required><br><br>
+
+			<label for="phone">Phone:</label>
+			<input type="tel" name="phone" id="phone" required><br><br>
+
+			<label for="address">Address:</label>
+			<textarea name="address" id="address" rows="3" cols="30" required></textarea><br><br>
+
+            <label for="loan-amount">Loan Amount:</label>
+            <input type="number" id="loan-amount" name="loan-amount" min="1" required>
+
+			<label for="loan-type">Type of Loan:</label>
+			<select name="loan-type" id="loan-type">
+				<option value="">Please select a loan type</option>
+				<option value="personal_loan">Personal Loan</option>
+				<option value="education_loan">Education Loan</option>
+				<option value="car_loan">Car Loan</option>
+				<option value="home_loan">Home Loan</option>
+			</select><br><br>
+
+                <label for="employment-status">Employment Status:</label>
+                <select id="employment-status" name="employment-status" required>
+                  <option value="" selected disabled>Select Status</option>
+                  <option value="employed">Employed</option>
+                  <option value="self-employed">Self-employed</option>
+                  <option value="unemployed">Unemployed</option>
+                </select>
+                <button type="submit" id="submit-loan" onclick="validateForm();">Apply Now</button>
+		</form>
+	</div>
+    <div class="copyright">
+        <p class="copy">CopyRights &copy 2023 CrownBank <span class="copy1">|</span> <span>Right Bank Right Now</span> <span class="copy1">|</span>  All Rights Reserved </p>
+    </div>
+	<script src="/JS/loanform.js"></script>
+</body>
+</html>

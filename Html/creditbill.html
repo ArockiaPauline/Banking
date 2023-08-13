@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CROWN BANK</title>
+    <link rel="stylesheet" href="/CSS/creditbill.css">
+</head>
+<body>
+    <div class="container">
+        <hr size="8px" color="#003e7e">
+        <header>
+            <div class="heading">
+                <div class="logo">
+                    <img src="/Images/logoaboutus.jpeg" id="logo">
+                </div>
+                <div class="head-content">
+                    Pay your Crown Bank Credit Card Bills Online
+                </div>
+            </div>
+        </header>
+        <hr size="8px" color="#003e7e">
+        <div class="form-container">
+            <div class="formdiv">
+                <p class="formtitle">Make Payment</p>
+                <form id="payform">
+                    <div class="form-group">
+                        <label for="name">Credit Card Number</label>
+                        <input type="text" id="name" name="name" placeholder="Enter 16 digit credit card number" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="reenter">Re-enter Credit Card Number</label>
+                        <input type="text" id="reenter" name="reenter" placeholder="Reenter card number" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Mobile Number</label>
+                        <input type="text" value="+91" width="10px" disabled>
+                        <input type="text" id="phone" name="phone" placeholder="Enter mobile" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="amount">Amount</label>
+                        <input type="text" id="amount" name="amount" placeholder="Enter the payment amount" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="card-number">Debit Card Number</label>
+                        <input type="text" id="card-number" name="card-number" placeholder="Enter your card number" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="expiry-date">Expiry Date</label>
+                        <input type="text" id="expiry-date" name="expiry-date" placeholder="MM/YY" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="cvv">CVV</label>
+                        <input type="text" id="cvv" name="cvv" placeholder="Enter your card's CVV" required>
+                    </div>
+
+                    <div class="form-group">
+                        <button type="submit" class="paybutton" onclick="validateBill();">Submit Payment</button>
+                    </div>
+                </form>
+            </div>
+            <div class="form-image">
+                <img src="/Images/billpay.jpg">
+            </div>
+        </div>
+        <div class="copyright">
+            <p class="copy">CopyRights &copy 2023 CrownBank <span class="copy1">|</span> <span>Right Bank Right Now</span> <span class="copy1">|</span>  All Rights Reserved </p>
+        </div>
+    </div>
+    <script src="/JS/creditcard.js"></script>
+</body>
+</html>

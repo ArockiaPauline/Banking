@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accounts - Crown Bank</title>
+    <link rel="stylesheet" href="/css/account.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="nav">
+                <a href="/Html/index.html">
+                    <img src="/images/logo1.png" class="logo">
+                </a>
+                <div class="item">
+                    <ul>
+                        <li>
+                            <a href="#">Accounts</a>
+                        </li>
+                        <li>
+                            <a href="/Html/loan.html">Loans</a>
+                        </li>
+                        <li>
+                            <a href="/html/card.html">Cards</a>
+                        </li>
+                        <li>
+                            <a href="/Html/insurance.html">Insurance</a>
+                        </li>
+                        <li>
+                            <a href="/Html/about.html">About Us</a>
+                        </li>
+                        <li>
+                            <a href="/html/contact.html">Contact Us</a>
+                        </li>
+                        <li>
+                    
+                            <button id="button" onclick="log()" style="border-radius:10px;font-weight: bold;">LOGIN</button>
+                    
+                            <!-- The Overlay PopUp for SignUp and LogIn -->
+                                
+                                <div class="popup-container" id = "popup-container">
+                                    
+                                    <!-- SignUp Form -->
+
+                                    <div class="form-container sign-up-container">
+                                        <form action="#" class="form-signUp" method="POST">
+                                            <h1>Sign Up for NetBanking</h1>
+                                            
+                                            <input type="text" placeholder="Name" id = "name" required>
+                                            <input type="email" placeholder="Email" id="email" required>
+                                            <input type="password" placeholder="Password" id="pass" required>
+                                            <button type="submit" id="register">Sign Up</button>
+                                        </form>
+                                    </div>
+
+                                    <!-- SignIn Form -->
+
+                                    <div class="form-container sign-in-container">
+                                        <form action="index.html" class="form-signin" method="POST">
+                                            <h1>LOGIN</h1>
+                                            <input type="username" placeholder="User Name" id ="username" required>
+                                            <input type="password" placeholder="Password" id="password" required>
+                                            <a href="#" id="forget-link" style="color: black;">Forgot your password?</a>
+                                            <button type="logyn" id="login" value="login" onclick="validate()">Sign In</button>
+                                        </form>
+                                    </div>
+
+                                    <!-- Overlays for the Forms -->
+                                    <div class="overlay-container">
+
+                                        <div class="overlay">
+
+                                            <div class="overlay-panel overlay-left">
+                                                <h1>Welcome Back!</h1>
+                                                <p>To keep connected please enter your log in details.</p>
+                                                <button class="ghost" id="signIn">Sign In</button>
+                                            </div>
+
+                                            <div class="overlay-panel overlay-right">
+                                                <h1>Hello!</h1>
+                                                <p>Enter your details and start your journey</p>
+                                                <button class="ghost" id="signUp">Sign Up</button>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <!-- End of the PopUp div. -->
+
+
+                            <!-- Necessary JavaScript File -->
+                            <script src="..//JS/LogValidate.js"></script>
+                                                        
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <div class="animation">
+
+        </div>
+        <div class="account">
+            <div class="acctitle">
+                <h1>Accounts</h1>
+            </div>
+            <div class="acccon">
+                <p>Crown Bank offers different type of accounts to meet your financial goals
+                    and secure your future. That's why, our savings and current accounts are specifically 
+                    designed keeping your unique needs in mind.
+                </p>
+            </div>
+        </div>
+        <div class="reasons">
+            <div class="reason-title">
+                <h1>Reasons to bank with us</h1>
+                <p class="redes">
+                    Accessing your account is easy and convenient with our wide network of branches
+                    and 24x7 ATMs across the country.  Your account is always at your fingertips with our Best
+                    in net banking feature.
+                </p>
+            </div>
+            <div class="reason-grid">
+                <div class="image">
+                    <img src="/images/healthcare.png" class="rimg">
+                    <p class="imagedes">
+                        Healthcare benefits for your safekeeping
+                    </p> 
+                </div>
+                <div class="image">
+                    <img src="/images/percenticon.png" class="rimg">
+                    <p class="imagedes">
+                        Earn 4% interest on your savings account balance
+                    </p> 
+                </div>
+                <div class="image">
+                    <img src="/images/group.png" class="rimg">
+                    <p class="imagedes">
+                        Our current account offers you perfect option based on your needs
+                    </p> 
+                </div>
+                <div class="image">
+                    <img src="/images/reloan.png" class="rimg">
+                    <p class="imagedes">
+                        Grow your business globally with our custom designed offerings
+                    </p> 
+                </div>
+            </div>
+        </div>
+        <div class="acc-detail">
+            Explore the different types of accounts as per your requirement...!
+        </div>
+        <div class="all-account">
+            <div class="one">
+                <div class="termimg">
+                    <img src="/images/saveacc.jpg">
+                    <h2>Savings Account</h2>
+                </div>
+                <div class="terminfo">
+                    Choose a safe and reliable way to grow your money securely
+                </div>
+                <a href="/Html/saving.html">
+                    <button type="submit" class="sbn">Know More</button>
+                </a>
+            </div>
+            <div class="one">
+                <div class="termimg">
+                    <img src="/images/current1.jpg">
+                    <h2>Current Account</h2>
+                </div>
+                <div class="terminfo">
+                    Hassle free and convenient transactionas as per your requirements
+                </div>
+                <a href="/Html/current.html">
+                    <button type="submit" class="sbn">Know More</button>
+                </a>
+            </div>
+            <div class="one">
+                <div class="termimg">
+                    <img src="/images/termdepo.jpg">
+                    <h2>Term Deposit</h2>
+                </div>
+                <div class="terminfo">
+                    Long or short term, maximize your savings efficiently
+                </div>
+                <a href="/Html/fixed.html">
+                    <button type="submit" class="sbn">Know More</button>
+                </a>
+            </div>
+        </div>
+        <div class="contact-wrapper">
+            <div class="box-wrapper">
+                <div class="pic">
+                    <img src="/images/manoverphone.jpg" class="mimg">
+                </div>
+                <div class="form-wrap">
+                    <form action="">
+                        <h2 class="form-title">Callback (Our team will call you back)</h2>
+                        <div class="form-field">
+                            <div class="form-head">
+                                <input type="text" class="fname" placeholder="First Name" required>
+                            </div>
+                            <div class="form-head">
+                                <input type="text" class="lname" placeholder="Last Name" required>
+                            </div>
+                            <div class="form-head">
+                                <input type="text" class="conum" placeholder="Contact Number" required>
+                            </div>
+                            <div class="form-head">
+                                <input type="email" class="mailid" placeholder="Email ID" required>
+                            </div>
+                            <div class="form-head">
+                                <textarea>Type your Query: </textarea>
+                            </div>
+                            <input type="submit" class="submit-btn" id="submitbtn">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="contact">
+            <div class="text">
+                <h1 class="con-title">Contacts</h1>
+            </div>
+            <div class="main">
+                <div class="box">
+                    <img src="/images/mail icon.png" width="80px" height="80px">
+                    <h1>Email </h1>
+                    <p>crownbankingofficial@gmail.com</p>
+                </div>
+                <div class="box">
+                    <img src="/images/icon8-location-50.png" width="80px" height="80px">
+                    <h1>Office</h1>
+                    <p>NO 833 E.V.R Periyar High Road<br>
+                        Arumbakkam,<br>
+                        Chennai 600 106, Tamil Nadu
+                    </p>
+                </div>
+                <div class="box">
+                    <img src="/images/icons8-phone-50.png" width="80px" height="80px">
+                    <h1>Phone</h1>
+                    <p>+91 9944758124</p>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="foot">
+                <div class="foot-mid">
+                    <div class="social-links">
+                        <p class="soc-link">CONNECT WITH US ON</p>
+                        <ul>
+                            <li>
+                                <a class="pic-link" href="#">
+                                    <img src="/images/facebook.png" width="34">
+                                </a>
+                            </li>
+                            <li>
+                                <a class="pic-link" href="#">
+                                    <img src="/images/twitter.png" width="34">
+                                </a>
+                            </li>
+                            <li>
+                                <a class="pic-link" href="#">
+                                    <img src="/images/youtube.png" width="34">
+                                </a>
+                            </li>
+                            <li>
+                                <a class="pic-link" href="#">
+                                    <img src="/images/instagram.png" width="34">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/Html/disclaimer.html">
+                                    <p class="link">Disclaimer</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/Html/privacy.html">
+                                    <p class="link">Privacy Policy</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/Html/terms&conditions.html">
+                                    <p class="link">Terms & Conditions</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="foot-right">
+                    <P>Always use the customer care numbers displayed on Bank's official website.
+                        Do not access unknown website links.
+                    </P>
+                </div>
+                <div class="copyright">
+                    <p class="copy">CopyRights &copy 2023 CrownBank <span class="copy1">|</span> <span>Right Bank Right Now</span> <span class="copy1">|</span>  All Rights Reserved </p>
+                </div>
+            </div>
+          </footer>          
+    </div>
+</body>
+    <script src="/JS/CrownBankLogin.js"></script>
+    <script src="/JS/submit.js"></script>
+</html>

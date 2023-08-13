@@ -1,0 +1,609 @@
+body{
+  margin:0%;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.nav{
+  width: 100%;
+  height: 150px;
+  background-color:  #003e7e;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+}
+.nav .logo{
+  margin-top: 14px;
+  margin-left: 35px;
+  height: 120px;
+  width:150px;
+  border: white;
+}
+.nav ul {
+  list-style: none;
+  display: flex;   
+}
+.nav li{
+  list-style-type: none;
+  display: flex;
+}
+.nav .item{
+  position:absolute;
+  right: 0;
+  top: 40px;
+  display: flex;
+  margin-right: 50px;
+}
+.nav .item ul li a{
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  color: aliceblue;
+  font-size: 20px;
+  padding:  5px 5px;
+  border-radius: 50px;
+  transition: 0.2s;
+  margin: 0 15px;
+  margin-left: 20px;
+  text-decoration: none;
+}
+.nav .item ul li a:hover{
+  color: cornflowerblue;
+  background: white;
+}
+.nav .item #button{
+  margin-right: 20px;
+  /* margin-top: 5px; */
+  height: 35px;
+  width: 100px;
+  border: 2px solid black;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  cursor: pointer;
+  transition: .2s;
+}
+
+.nav .item #button:hover{
+  /* transform: scale(1.1); */
+  background-color: #d9e3ec;
+}
+
+.popup-container{
+   
+  display: none;
+  position: absolute;
+  top: 115px;
+  left: 2%;
+  overflow: hidden;
+  flex-direction: column;
+  justify-content: center;
+  font-family: 'Asul', sans-serif;
+  
+  align-content: left;
+  height: 400px;
+  width: 80%;
+  background: white;
+  border-radius: 10px;
+  box-shadow : 0 14px 28px rgba(0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+.close-btn{
+position: absolute;
+top:0;
+height: 50px;
+width:50px;
+font-size: 22px;
+color: black;
+bottom:100%;
+left: 180%;
+display: block;
+z-index: 5;
+border:1px solid red;
+}
+.popup-container h1 {
+font-weight: bold;
+margin: 0;
+}
+.popup-container p {
+font-size: 14px;
+font-weight: 100;
+line-height: 20px;
+letter-spacing: 0.5px;
+margin: 20px 0 30px;
+}
+.popup-container span {
+font-size: 12px;
+}
+
+.popup-container a {
+color: #333333;
+font-size: 14px;
+text-decoration: none;
+margin: 15px 0;
+}
+.popup-container a:hover {
+border-bottom: 1px solid #333333;
+}
+.form-container form {
+  background-color: #ffff;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 0 50px;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.popup-container .social-container {
+margin:20px 0;
+}
+
+.social-container a {
+display: inline-flex;
+justify-content: center;
+align-items: center;
+margin: 0 5px;
+height: 40px;
+width: 40px;
+}
+.social-container i{
+font-size: 22px;
+padding: 5px;
+border:1px solid #333333;
+border-radius: 50%;
+}
+
+.form-container input{
+background: #eeee;
+border:none;
+outline: none;
+padding: 18px 15px;
+margin: 8px 0;
+width:70%;
+}
+
+
+.popup-container button{
+  margin-top: 40px;
+border-radius: 20px;
+border: 1px solid #2bbcff;
+background:#2bbcff;
+color: #ffffff;
+font-size: 12px;
+font-weight: bold;
+padding: 12px 45px;
+letter-spacing: 1px;
+text-transform: uppercase;
+transition: transform 80ms ease-in;
+}
+
+.popup-container button:active{
+transform: scale(0.95);
+}
+
+.popup-container button:focus{
+outline: none;
+}
+
+button.ghost {
+background: transparent;
+border-color:#ffffff;
+}
+
+.form-container{
+position: absolute;
+top: 0;
+height: 100%;
+transition: all 0.6s ease-in-out;
+}
+
+.sign-in-container{
+left:0;
+width: 50%;
+z-index: 2;
+}
+
+/*Moves sign In to right */
+
+.popup-container.right-panel-active .sign-in-container{
+transform: translateX(100%);
+}
+
+.sign-up-container{
+left:0;
+width: 50%;
+z-index: 1;
+opacity: 0;
+}
+
+/*Brings Sign Up over sign in*/
+.popup-container.right-panel-active .sign-up-container{
+transform: translateX(100%);
+opacity: 1;
+z-index: 5;
+animation: show 0.6s;
+}
+
+@keyframes show {
+0%,49.99%{
+  opacity: 0;
+  z-index: 1;
+}
+50%,100%{
+  opacity: 1;
+  z-index: 5;
+}
+}
+.overlay-container {
+position: absolute;
+top:0;
+left:50%;
+width:50%;
+height: 100%;
+overflow: hidden;
+transition: transform 0.5s ease-in-out;
+z-index: 100;
+}
+.overlay{
+background-color: #003e7e;
+background-size: cover;
+background-position: 0 0;
+color: #ffffff;
+height: 400px;
+position: relative;
+left:-100%;
+height: 100%;
+width:200%;
+transform: translateX(0);
+transition: transform 0.5s ease-in-out;
+}
+
+.overlay-panel{
+position: absolute;
+top:0;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding:0 40px;
+height: 100%;
+width: 50%;
+text-align: center;
+transform: translateX(0);
+transition: transform 0.6s ease-in-out;
+} 
+
+.overlay-right{
+right: 0;
+transform: translateX(0);
+}
+
+.overlay-left{
+transform: translateX(-20%);
+}
+
+
+/*Moves Overlay to left*/
+.popup-container.right-panel-active .overlay-container{
+transform: translateX(-100%);
+}
+
+/*Move Overlay back */
+.popup-container.right-panel-active .overlay{
+transform: translateX(50%);
+}
+
+/*Shifts the overlay left content to position*/
+.popup-container.right-panel-active .overlay-left {
+transform: translateX(0);
+}
+/*Shifts the overlay right's content to position*/
+.popup-container.right-panel-active .overlay-right {
+transform: translateX(20%);
+}  
+
+.limg{
+  width: 100%;
+  overflow: hidden;
+}
+.loancon{
+  position: absolute;
+  font-size: 50px;
+  /* color: #333333; */
+  top: 65%;
+  left: 30%;
+}
+.wtitle{
+  text-align: center;
+  color: #003e7e;
+  font-size: 30px;
+}
+.reasons{
+  display: flex;
+  justify-content: space-around;
+}
+.one p{
+  font-size: 20px;
+  color: #003e7e;
+  text-align: center;
+  transition: 0.4s;
+}
+.one img:hover{
+  transform: scale(1.1);
+  /* background-color: #003e7e; */
+  border-radius: 25%;
+}
+.proloan{
+  text-align: center;
+  margin-top: 40px;
+}
+.proloan h2{
+  font-size: 30px;
+}
+.proloan h4{
+  color: #003e7e;
+  font-size: 20px;
+  font-style: italic;
+}
+.loantypes{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  margin-left: 40px;
+  gap: 20px;
+}
+.loanimg{
+  border: 2px solid #003e7e;
+  width: 400px;
+  height: 520px;
+  transition: 0.5s;
+  border-radius: 25px;
+  margin-top: 30px;
+}
+.loanimg img{
+  margin-left: 50px;
+  margin-top: 30px;
+  border-radius: 10%;
+}
+.loanname{
+  margin-left: 120px;
+  color: #003e7e;
+  font-size: 25px;
+}
+.loanimg li{
+  font-size: 20px;
+}
+.loanimg:hover{
+  box-shadow: 4px 4px 4px #003e7e;
+}
+.foot{
+  padding-top:20px;
+  background-color:#003e7e;
+  margin-bottom:0;
+  height: 200px;
+  text-align: center;
+  margin-top: -30px;
+}
+.contact{
+  width: 100%;
+  height: 570px;
+  background-color: white;
+}
+.con-title{
+  color:#0a75df;
+  font-size: 30px;
+  font-style: italic;
+}
+.text{
+  text-align: center;
+  padding: 50px;
+}
+.text h1{
+  font-size: 35px;
+}
+.text p{
+  font-size: 18px;
+  padding: 15px;
+}
+.main{
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin-top: -30px;
+}
+.box{
+  width: 280px;
+  height: 280px;
+  background-color: white;
+  box-shadow: 0px 15px 25px  #003e7e;
+  border-radius: 25px;
+  text-align: center;
+  padding: 20px;
+}
+.box h1{
+  padding: 15px;
+}
+.box p{
+  font-size: 18px;
+}
+.foot-right p{
+  color: white;
+}
+.foot-mid .social-links{
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+}
+.social-links .soc-link{
+  margin-top: 30px;
+  margin-left: 100px;
+}
+.social-links ul{
+  display: flex;
+  list-style-type: none;
+  align-items: center;
+  position: relative;
+  flex-direction: row;
+  gap: 50px; 
+  transition: 0.3s ease;
+}
+.social-links ul li:hover{
+  color: burlywood;
+  transform: scale(1.1);
+}
+.social-links ul li a p:hover{
+  color: burlywood;
+  transform: scale(1.1);
+}
+.social-links p{
+  color: antiquewhite;
+  margin-left: 20px;
+}
+
+.copyright {
+  height: 50px;
+  padding: 1px;
+  font-size: large;
+  font-weight: bold;
+  text-align: center;
+  background-color: #00244b;;
+}
+.copy{
+  color: white;
+}
+.copy1{
+  padding: 20px;
+}
+
+/*css for loan calculator*/
+
+.loan-calculator{
+  width: 90%;
+  box-sizing: border-box;
+  margin: 5%;
+  border-radius: 8px;
+  overflow: clip;
+}
+  
+.loan-calculator *{
+  box-sizing: border-box;   
+}
+  
+.loan-calculator .top{
+  background-color: #2e3c78;
+  padding-bottom: 5px;  
+}
+  
+.loan-calculator .top h2{
+  text-align: center;
+  padding-top: 2%;
+  color:#ffffff
+}
+   
+.loan-calculator .top .group .title{
+    padding-bottom: 5px;
+    color: #ffffff;
+}
+.loan-calculator .group{
+  padding-left: 2%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-right: 2%;
+}
+.loan-calculator .result{
+  margin-top: 0;    
+  background-color:#2e3c78 ;
+  overflow: hidden;
+  padding: 0% 2% 2% 2%;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content:space-between;
+  flex-direction: row;
+}
+  
+.loan-calculator .result .left{
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+  
+.loan-calculator .result .left h3{
+  font-size: 16px;
+  color: #ffffff;
+}
+.loan-calculator .result .left .value{
+  font-size: 16px;
+  padding-bottom: 2px;
+  border-bottom: solid 1px;    
+  color: #ffffff;
+}
+  
+.loan-calculator .result .calculate-button{
+  margin-top: 10px;
+  background-color:#ffffff ;
+  border: 2px solid #ffffff;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.calculatebutton-blackborder{
+  margin-top: 10px;
+  background-color:#ffffff ;
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.loan-calculator .result .left .deduction-percentage .value::after{
+  content: " %"; 
+}
+  
+.loan-calculator .result .left .total-interest .value::after,
+.loan-calculator .result .left .total-paid .value::after,
+.loan-calculator .result .left .monthly-installment .value::after{
+  content: "";
+}
+.loan-calculator .result .right{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 40%;
+}
+  
+.loan-calculator .result .right .chart{
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  right: 0%;
+  top: 2%;
+  width: 3em;
+}
+  
+.loan-calculator .result .clear-button{
+  margin-top: 10px;
+  background-color:#ffffff ;
+  border: 2px solid #ffffff;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-left: 2%;
+}
+  
+.clearbutton-blackborder{
+  margin-top: 10px;
+  background-color:#ffffff ;
+  border: 2px solid rgb(255, 254, 254);
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-left: 2%;
+}

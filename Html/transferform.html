@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fund Transfer - Crown Bank</title>
+    <link rel="stylesheet" href="/CSS/transfer.css">
+</head>
+<body>
+    <form action="/Html/transfer.html">
+        <img src="/Images/funds.jpg" width="100%" height="300px">
+        <div class="container">
+            <div class="fund">
+                <h2 style="color:#003e7e"><center>Fund Transfer</center></h3>
+                    <div class="container">
+                        
+                        <fieldset><br>
+                            <label style="margin-left: 19px;">From Account <span>*</span></label>
+                                <input type="text" required placeholder="Your Account Number">
+                            <label style="margin-left: 30px;">To Account  <span>*</span></label>
+                                <input type="text" required placeholder="Receiver's Account Number"><br><br>
+                            <label style="margin-left: 60px;">Amount <span>*</span></label>
+                                <input type="text" required placeholder="Amount ">
+                            <label style="margin-left: 30px;">Transaction Date  <span>*</span></label>
+                                <input type="date"><br><br>
+                            <label>Mode of Transfer <span>*</span></label>
+                            <select>
+                                <option value="select">---Select---</option>
+                                <option value="NEFT">NEFT</option>
+                                <option value="IMPS">IMPS</option>
+                                <option value="RTGS">RTGS</option>
+                            </select><br><br>
+                            
+                            <label id="reason" style="margin-left: 75px;">Reason</label>
+                                <textarea placeholder="Type a Reason"></textarea>
+                            <label id="reason" style="margin-left: 30px;">Remark</label>
+                                <textarea placeholder="Type your message" rows="3" cols="3"></textarea><br><br><br><br>
+                            
+                        <div class="submit" >
+                                <input type="submit" id="submit-btn" value="Transfer">
+                        </div>
+                        <br>
+                        
+                        </fieldset>
+        
+                    </div>
+            </div>
+           
+        </div>
+    </form>
+</body>
+</html>
